@@ -48,6 +48,7 @@ public class HelloWorldBuilder extends Builder implements SimpleBuildStep {
         } else {
             listener.getLogger().println("Hello, " + name + "!");
         }
+        System.out.println("Hello World called");
     }
 
     @Symbol("greet")

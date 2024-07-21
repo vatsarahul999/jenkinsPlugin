@@ -7,7 +7,7 @@
   <definition class="org.jenkinsci.plugins.workflow.cps.CpsFlowDefinition" plugin="workflow-cps@2.83">
     <script>
 node {
- greet &apos;Abc&apos; 
+ greet &apos;Trump&apos; 
 }</script>
     <sandbox>true</sandbox>
   </definition>

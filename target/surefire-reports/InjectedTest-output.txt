@@ -1,79 +1,79 @@
 Running tests for io.jenkins.plugins:demo:1.0-SNAPSHOT
-Jul 15, 2024 12:45:53 AM org.eclipse.jetty.util.log.Log initialized
-INFO: Logging initialized @524ms to org.eclipse.jetty.util.log.Slf4jLog
-Jul 15, 2024 12:45:55 AM org.jvnet.hudson.test.WarExploder explode
-INFO: Exploding /Users/rahulvatsa/.m2/repository/org/jenkins-ci/main/jenkins-war/2.235.1/jenkins-war-2.235.1.war into /Users/rahulvatsa/myPlugin/demo/target/jenkins-for-test
-Jul 15, 2024 12:45:59 AM org.eclipse.jetty.server.handler.ContextHandler setContextPath
+Jul 21, 2024 11:55:35 PM org.eclipse.jetty.util.log.Log initialized
+INFO: Logging initialized @581ms to org.eclipse.jetty.util.log.Slf4jLog
+Jul 21, 2024 11:55:37 PM org.jvnet.hudson.test.WarExploder explode
+INFO: Picking up existing exploded jenkins.war at /Users/rahulvatsa/myPlugin/demo/target/jenkins-for-test
+Jul 21, 2024 11:55:37 PM org.eclipse.jetty.server.handler.ContextHandler setContextPath
 WARNING: Empty contextPath
-Jul 15, 2024 12:45:59 AM org.eclipse.jetty.server.Server doStart
+Jul 21, 2024 11:55:37 PM org.eclipse.jetty.server.Server doStart
 INFO: jetty-9.4.32.v20200930; built: 2020-09-30T16:16:37.804Z; git: de97d26f7bd222a0e16831e353d702a7a422f711; jvm 1.8.0_131-b11
-Jul 15, 2024 12:45:59 AM org.eclipse.jetty.webapp.StandardDescriptorProcessor visitServlet
+Jul 21, 2024 11:55:37 PM org.eclipse.jetty.webapp.StandardDescriptorProcessor visitServlet
 INFO: NO JSP Support for /, did not find org.eclipse.jetty.jsp.JettyJspServlet
-Jul 15, 2024 12:45:59 AM org.eclipse.jetty.server.session.DefaultSessionIdManager doStart
+Jul 21, 2024 11:55:37 PM org.eclipse.jetty.server.session.DefaultSessionIdManager doStart
 INFO: DefaultSessionIdManager workerName=node0
-Jul 15, 2024 12:45:59 AM org.eclipse.jetty.server.session.DefaultSessionIdManager doStart
+Jul 21, 2024 11:55:37 PM org.eclipse.jetty.server.session.DefaultSessionIdManager doStart
 INFO: No SessionScavenger set, using defaults
-Jul 15, 2024 12:45:59 AM org.eclipse.jetty.server.session.HouseKeeper startScavenging
-INFO: node0 Scavenging every 600000ms
-Jul 15, 2024 12:45:59 AM org.eclipse.jetty.server.handler.ContextHandler doStart
-INFO: Started o.e.j.w.WebAppContext@7e985ce9{Jenkins v2.235.1,/,file:///Users/rahulvatsa/myPlugin/demo/target/jenkins-for-test/,AVAILABLE}{/Users/rahulvatsa/myPlugin/demo/target/jenkins-for-test}
-Jul 15, 2024 12:45:59 AM org.eclipse.jetty.server.AbstractConnector doStart
-INFO: Started ServerConnector@4879f0f2{HTTP/1.1, (http/1.1)}{localhost:55177}
-Jul 15, 2024 12:45:59 AM org.eclipse.jetty.server.Server doStart
-INFO: Started @6661ms
-Jul 15, 2024 12:46:01 AM jenkins.InitReactorRunner$1 onAttained
-INFO: Started initialization
-Jul 15, 2024 12:46:01 AM hudson.PluginManager considerDetachedPlugin
-INFO: Loading a detached plugin as a dependency: /Users/rahulvatsa/myPlugin/demo/target/tmp/jenkins3814708303974100287/plugins/jdk-tool.jpi
-Jul 15, 2024 12:46:01 AM hudson.PluginManager considerDetachedPlugin
-INFO: Loading a detached plugin as a dependency: /Users/rahulvatsa/myPlugin/demo/target/tmp/jenkins3814708303974100287/plugins/trilead-api.jpi
-Jul 15, 2024 12:46:01 AM hudson.PluginManager considerDetachedPlugin
-INFO: Loading a detached plugin as a dependency: /Users/rahulvatsa/myPlugin/demo/target/tmp/jenkins3814708303974100287/plugins/command-launcher.jpi
-Jul 15, 2024 12:46:02 AM hudson.PluginManager considerDetachedPlugin
-INFO: Loading a detached plugin as a dependency: /Users/rahulvatsa/myPlugin/demo/target/tmp/jenkins3814708303974100287/plugins/bouncycastle-api.jpi
-Jul 15, 2024 12:46:03 AM jenkins.InitReactorRunner$1 onAttained
-INFO: Listed all plugins
-Jul 15, 2024 12:46:03 AM jenkins.bouncycastle.api.SecurityProviderInitializer addSecurityProvider
-INFO: Initializing Bouncy Castle security provider.
-Jul 15, 2024 12:46:03 AM jenkins.bouncycastle.api.SecurityProviderInitializer addSecurityProvider
-INFO: Bouncy Castle security provider initialized.
-Jul 15, 2024 12:46:05 AM jenkins.InitReactorRunner$1 onAttained
-INFO: Prepared all plugins
-Jul 15, 2024 12:46:05 AM jenkins.InitReactorRunner$1 onAttained
-INFO: Started all plugins
-Jul 15, 2024 12:46:05 AM jenkins.InitReactorRunner$1 onAttained
-INFO: Augmented all extensions
-Jul 15, 2024 12:46:07 AM jenkins.InitReactorRunner$1 onAttained
-INFO: System config loaded
-Jul 15, 2024 12:46:07 AM jenkins.InitReactorRunner$1 onAttained
-INFO: System config adapted
-Jul 15, 2024 12:46:07 AM jenkins.InitReactorRunner$1 onAttained
-INFO: Loaded all jobs
-Jul 15, 2024 12:46:07 AM jenkins.InitReactorRunner$1 onAttained
-INFO: Configuration for all jobs updated
-Jul 15, 2024 12:46:07 AM jenkins.InitReactorRunner$1 onAttained
-INFO: Completed initialization
-Jul 15, 2024 12:46:07 AM org.eclipse.jetty.server.Server doStart
-INFO: jetty-9.4.32.v20200930; built: 2020-09-30T16:16:37.804Z; git: de97d26f7bd222a0e16831e353d702a7a422f711; jvm 1.8.0_131-b11
-Jul 15, 2024 12:46:07 AM org.eclipse.jetty.server.session.DefaultSessionIdManager doStart
-INFO: DefaultSessionIdManager workerName=node0
-Jul 15, 2024 12:46:07 AM org.eclipse.jetty.server.session.DefaultSessionIdManager doStart
-INFO: No SessionScavenger set, using defaults
-Jul 15, 2024 12:46:07 AM org.eclipse.jetty.server.session.HouseKeeper startScavenging
+Jul 21, 2024 11:55:37 PM org.eclipse.jetty.server.session.HouseKeeper startScavenging
 INFO: node0 Scavenging every 660000ms
-Jul 15, 2024 12:46:07 AM org.eclipse.jetty.server.handler.ContextHandler doStart
-INFO: Started o.e.j.s.ServletContextHandler@77e80a5e{/,null,AVAILABLE}
-Jul 15, 2024 12:46:07 AM org.eclipse.jetty.server.AbstractConnector doStart
-INFO: Started ServerConnector@240139e1{HTTP/1.1, (http/1.1)}{0.0.0.0:55179}
-Jul 15, 2024 12:46:07 AM org.eclipse.jetty.server.Server doStart
-INFO: Started @15043ms
-Jul 15, 2024 12:46:09 AM org.eclipse.jetty.server.AbstractConnector doStop
-INFO: Stopped ServerConnector@4879f0f2{HTTP/1.1, (http/1.1)}{localhost:0}
-Jul 15, 2024 12:46:09 AM org.eclipse.jetty.server.session.HouseKeeper stopScavenging
+Jul 21, 2024 11:55:37 PM org.eclipse.jetty.server.handler.ContextHandler doStart
+INFO: Started o.e.j.w.WebAppContext@83298d7{Jenkins v2.235.1,/,file:///Users/rahulvatsa/myPlugin/demo/target/jenkins-for-test/,AVAILABLE}{/Users/rahulvatsa/myPlugin/demo/target/jenkins-for-test}
+Jul 21, 2024 11:55:37 PM org.eclipse.jetty.server.AbstractConnector doStart
+INFO: Started ServerConnector@6941827a{HTTP/1.1, (http/1.1)}{localhost:59351}
+Jul 21, 2024 11:55:37 PM org.eclipse.jetty.server.Server doStart
+INFO: Started @2783ms
+Jul 21, 2024 11:55:39 PM jenkins.InitReactorRunner$1 onAttained
+INFO: Started initialization
+Jul 21, 2024 11:55:39 PM hudson.PluginManager considerDetachedPlugin
+INFO: Loading a detached plugin as a dependency: /Users/rahulvatsa/myPlugin/demo/target/tmp/jenkins2008052675467693004/plugins/jdk-tool.jpi
+Jul 21, 2024 11:55:39 PM hudson.PluginManager considerDetachedPlugin
+INFO: Loading a detached plugin as a dependency: /Users/rahulvatsa/myPlugin/demo/target/tmp/jenkins2008052675467693004/plugins/trilead-api.jpi
+Jul 21, 2024 11:55:40 PM hudson.PluginManager considerDetachedPlugin
+INFO: Loading a detached plugin as a dependency: /Users/rahulvatsa/myPlugin/demo/target/tmp/jenkins2008052675467693004/plugins/command-launcher.jpi
+Jul 21, 2024 11:55:40 PM hudson.PluginManager considerDetachedPlugin
+INFO: Loading a detached plugin as a dependency: /Users/rahulvatsa/myPlugin/demo/target/tmp/jenkins2008052675467693004/plugins/bouncycastle-api.jpi
+Jul 21, 2024 11:55:42 PM jenkins.InitReactorRunner$1 onAttained
+INFO: Listed all plugins
+Jul 21, 2024 11:55:42 PM jenkins.bouncycastle.api.SecurityProviderInitializer addSecurityProvider
+INFO: Initializing Bouncy Castle security provider.
+Jul 21, 2024 11:55:42 PM jenkins.bouncycastle.api.SecurityProviderInitializer addSecurityProvider
+INFO: Bouncy Castle security provider initialized.
+Jul 21, 2024 11:55:44 PM jenkins.InitReactorRunner$1 onAttained
+INFO: Prepared all plugins
+Jul 21, 2024 11:55:44 PM jenkins.InitReactorRunner$1 onAttained
+INFO: Started all plugins
+Jul 21, 2024 11:55:44 PM jenkins.InitReactorRunner$1 onAttained
+INFO: Augmented all extensions
+Jul 21, 2024 11:55:45 PM jenkins.InitReactorRunner$1 onAttained
+INFO: System config loaded
+Jul 21, 2024 11:55:45 PM jenkins.InitReactorRunner$1 onAttained
+INFO: System config adapted
+Jul 21, 2024 11:55:45 PM jenkins.InitReactorRunner$1 onAttained
+INFO: Loaded all jobs
+Jul 21, 2024 11:55:45 PM jenkins.InitReactorRunner$1 onAttained
+INFO: Configuration for all jobs updated
+Jul 21, 2024 11:55:45 PM jenkins.InitReactorRunner$1 onAttained
+INFO: Completed initialization
+Jul 21, 2024 11:55:45 PM org.eclipse.jetty.server.Server doStart
+INFO: jetty-9.4.32.v20200930; built: 2020-09-30T16:16:37.804Z; git: de97d26f7bd222a0e16831e353d702a7a422f711; jvm 1.8.0_131-b11
+Jul 21, 2024 11:55:45 PM org.eclipse.jetty.server.session.DefaultSessionIdManager doStart
+INFO: DefaultSessionIdManager workerName=node0
+Jul 21, 2024 11:55:45 PM org.eclipse.jetty.server.session.DefaultSessionIdManager doStart
+INFO: No SessionScavenger set, using defaults
+Jul 21, 2024 11:55:45 PM org.eclipse.jetty.server.session.HouseKeeper startScavenging
+INFO: node0 Scavenging every 660000ms
+Jul 21, 2024 11:55:45 PM org.eclipse.jetty.server.handler.ContextHandler doStart
+INFO: Started o.e.j.s.ServletContextHandler@4e406694{/,null,AVAILABLE}
+Jul 21, 2024 11:55:45 PM org.eclipse.jetty.server.AbstractConnector doStart
+INFO: Started ServerConnector@76f10035{HTTP/1.1, (http/1.1)}{0.0.0.0:59353}
+Jul 21, 2024 11:55:45 PM org.eclipse.jetty.server.Server doStart
+INFO: Started @10398ms
+Jul 21, 2024 11:55:47 PM org.eclipse.jetty.server.AbstractConnector doStop
+INFO: Stopped ServerConnector@6941827a{HTTP/1.1, (http/1.1)}{localhost:0}
+Jul 21, 2024 11:55:47 PM org.eclipse.jetty.server.session.HouseKeeper stopScavenging
 INFO: node0 Stopped scavenging
-Jul 15, 2024 12:46:09 AM org.eclipse.jetty.server.handler.ContextHandler doStop
-INFO: Stopped o.e.j.w.WebAppContext@7e985ce9{Jenkins v2.235.1,/,file:///Users/rahulvatsa/myPlugin/demo/target/jenkins-for-test/,STOPPED}{/Users/rahulvatsa/myPlugin/demo/target/jenkins-for-test}
-Jul 15, 2024 12:46:09 AM jenkins.model.Jenkins cleanUp
+Jul 21, 2024 11:55:47 PM org.eclipse.jetty.server.handler.ContextHandler doStop
+INFO: Stopped o.e.j.w.WebAppContext@83298d7{Jenkins v2.235.1,/,file:///Users/rahulvatsa/myPlugin/demo/target/jenkins-for-test/,STOPPED}{/Users/rahulvatsa/myPlugin/demo/target/jenkins-for-test}
+Jul 21, 2024 11:55:47 PM jenkins.model.Jenkins cleanUp
 INFO: Stopping Jenkins
-Jul 15, 2024 12:46:10 AM jenkins.model.Jenkins cleanUp
+Jul 21, 2024 11:55:47 PM jenkins.model.Jenkins cleanUp
 INFO: Jenkins stopped
