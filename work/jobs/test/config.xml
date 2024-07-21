@@ -1,0 +1,72 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<flow-definition plugin="workflow-job@2.40">
+  <actions/>
+  <description>This is test</description>
+  <keepDependencies>false</keepDependencies>
+  <properties/>
+  <definition class="org.jenkinsci.plugins.workflow.cps.CpsFlowDefinition" plugin="workflow-cps@2.83">
+    <script>pipeline {
+    agent any
+
+    tools {
+        maven &apos;maven 3.6.3&apos;
+        jdk &apos;jdk17&apos; // Ensure this matches the name configured in Jenkins
+    }
+
+    environment {
+        MY_JOB = &apos;This is my Jenkins job&apos;
+        JAVA_HOME = tool name: &apos;jdk17&apos;, type: &apos;jdk&apos;
+        PATH = &quot;${env.JAVA_HOME}/bin:${env.PATH}&quot;
+    }
+
+    stages {
+        stage(&apos;Checkout&apos;) {
+            steps {
+                checkout scm: [$class: &apos;GitSCM&apos;,
+                               branches: [[name: &apos;*/main&apos;]],
+                               userRemoteConfigs: [[url: &apos;https://github.com/vatsarahul999/jenkins&apos;]]]
+            }
+        }
+
+        stage(&apos;Initialize&apos;) {
+            environment {
+                MY_INIT_VAR = &apos;Initialize env var&apos;
+            }
+            steps {
+                sh &apos;echo $MY_JOB&apos;
+                sh &apos;echo $MY_INIT_VAR&apos;
+            }
+        }
+
+        stage(&apos;Build&apos;) {
+            steps {
+                script {
+                    env.JAVA_HOME = tool name: &apos;jdk17&apos;, type: &apos;jdk&apos;
+                    env.PATH = &quot;${env.JAVA_HOME}/bin:${env.PATH}&quot;
+                }
+                sh &apos;&apos;&apos;
+                    echo $MY_JOB
+                    echo JAVA_HOME=$JAVA_HOME
+                    echo PATH=$PATH
+                    java -version
+                    javac -version
+                    mvn clean install
+                &apos;&apos;&apos;
+            }
+        }
+    }
+
+    post {
+        success {
+            echo &apos;Build and test completed successfully!&apos;
+        }
+        failure {
+            echo &apos;Build or test failed.&apos;
+        }
+    }
+}</script>
+    <sandbox>true</sandbox>
+  </definition>
+  <triggers/>
+  <disabled>false</disabled>
+</flow-definition>

@@ -1,0 +1,114 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<flow-build plugin="workflow-job@2.40">
+  <actions>
+    <hudson.model.CauseAction>
+      <causeBag class="linked-hash-map">
+        <entry>
+          <hudson.model.Cause_-UserIdCause/>
+          <int>1</int>
+        </entry>
+      </causeBag>
+    </hudson.model.CauseAction>
+  </actions>
+  <queueId>1</queueId>
+  <timestamp>1721001510165</timestamp>
+  <startTime>1721001510171</startTime>
+  <result>FAILURE</result>
+  <duration>656</duration>
+  <charset>UTF-8</charset>
+  <keepLog>false</keepLog>
+  <execution class="org.jenkinsci.plugins.workflow.cps.CpsFlowExecution">
+    <result>FAILURE</result>
+    <script>pipeline {
+    agent any
+
+    tools {
+        maven &apos;maven 3.6.3&apos;
+        jdk &apos;jdk17&apos; // Ensure this matches the name configured in Jenkins
+    }
+
+    environment {
+        MY_JOB = &apos;This is my Jenkins job&apos;
+        JAVA_HOME = tool name: &apos;jdk17&apos;, type: &apos;jdk&apos;
+        PATH = &quot;${env.JAVA_HOME}/bin:${env.PATH}&quot;
+    }
+
+    stages {
+        stage(&apos;Checkout&apos;) {
+            steps {
+                checkout scm: [$class: &apos;GitSCM&apos;,
+                               branches: [[name: &apos;*/main&apos;]],
+                               userRemoteConfigs: [[url: &apos;https://github.com/vatsarahul999/jenkins&apos;]]]
+            }
+        }
+
+        stage(&apos;Initialize&apos;) {
+            environment {
+                MY_INIT_VAR = &apos;Initialize env var&apos;
+            }
+            steps {
+                sh &apos;echo $MY_JOB&apos;
+                sh &apos;echo $MY_INIT_VAR&apos;
+            }
+        }
+
+        stage(&apos;Build&apos;) {
+            steps {
+                script {
+                    env.JAVA_HOME = tool name: &apos;jdk17&apos;, type: &apos;jdk&apos;
+                    env.PATH = &quot;${env.JAVA_HOME}/bin:${env.PATH}&quot;
+                }
+                sh &apos;&apos;&apos;
+                    echo $MY_JOB
+                    echo JAVA_HOME=$JAVA_HOME
+                    echo PATH=$PATH
+                    java -version
+                    javac -version
+                    mvn clean install
+                &apos;&apos;&apos;
+            }
+        }
+    }
+
+    post {
+        success {
+            echo &apos;Build and test completed successfully!&apos;
+        }
+        failure {
+            echo &apos;Build or test failed.&apos;
+        }
+    }
+}</script>
+    <loadedScripts class="map"/>
+    <durabilityHint>MAX_SURVIVABILITY</durabilityHint>
+    <timings class="map">
+      <entry>
+        <string>flowNode</string>
+        <long>26413762</long>
+      </entry>
+      <entry>
+        <string>classLoad</string>
+        <long>286117115</long>
+      </entry>
+      <entry>
+        <string>run</string>
+        <long>251373179</long>
+      </entry>
+      <entry>
+        <string>parse</string>
+        <long>238570798</long>
+      </entry>
+      <entry>
+        <string>saveProgram</string>
+        <long>75113787</long>
+      </entry>
+    </timings>
+    <sandbox>true</sandbox>
+    <iota>3</iota>
+    <head>1:3</head>
+    <done>true</done>
+    <resumeBlocked>false</resumeBlocked>
+  </execution>
+  <completed>true</completed>
+  <checkouts class="hudson.util.PersistedList"/>
+</flow-build>

@@ -1,0 +1,56 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<flow-build plugin="workflow-job@2.40">
+  <actions>
+    <hudson.model.CauseAction>
+      <causeBag class="linked-hash-map">
+        <entry>
+          <hudson.model.Cause_-UserIdCause/>
+          <int>1</int>
+        </entry>
+      </causeBag>
+    </hudson.model.CauseAction>
+  </actions>
+  <queueId>7</queueId>
+  <timestamp>1721002228203</timestamp>
+  <startTime>1721002228206</startTime>
+  <result>FAILURE</result>
+  <duration>104</duration>
+  <charset>UTF-8</charset>
+  <keepLog>false</keepLog>
+  <execution class="org.jenkinsci.plugins.workflow.cps.CpsFlowExecution">
+    <result>FAILURE</result>
+    <script>echo &apos;Hello&apos;
+greet &apos;Abc&apos;</script>
+    <loadedScripts class="map"/>
+    <durabilityHint>MAX_SURVIVABILITY</durabilityHint>
+    <timings class="map">
+      <entry>
+        <string>flowNode</string>
+        <long>23924268</long>
+      </entry>
+      <entry>
+        <string>classLoad</string>
+        <long>3890330</long>
+      </entry>
+      <entry>
+        <string>run</string>
+        <long>89157947</long>
+      </entry>
+      <entry>
+        <string>parse</string>
+        <long>7611032</long>
+      </entry>
+      <entry>
+        <string>saveProgram</string>
+        <long>8361202</long>
+      </entry>
+    </timings>
+    <sandbox>true</sandbox>
+    <iota>5</iota>
+    <head>1:5</head>
+    <done>true</done>
+    <resumeBlocked>false</resumeBlocked>
+  </execution>
+  <completed>true</completed>
+  <checkouts class="hudson.util.PersistedList"/>
+</flow-build>
